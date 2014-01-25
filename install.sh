@@ -524,5 +524,5 @@ if test "x$tmp_dir" != "x"; then
   rm -r "$tmp_dir"
 fi
 
-echo "alias chefrun='chef-solo -c /root/chef-repo/solo.rb -j /root/chef-repo/web.json"
+echo "alias chefrun='chef-solo -c /root/chef-repo/solo.rb -j /root/chef-repo/web.json'" >> ~/.bashrc
 source ~/.bashrc 
