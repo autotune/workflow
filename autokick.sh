@@ -33,7 +33,6 @@ else
         USERS="$USERS"
 fi
 
-echo $USERS
 
 if [[ -z "$MINUTES" ]];
 then
