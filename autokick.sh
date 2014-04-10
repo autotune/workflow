@@ -108,7 +108,7 @@ then
 fi
 
 KICK="$(expr $EXCLLINES - $USERS)"
-if [[ $KICK < $USERS ]];
+if [[ $KICK > $USERS ]];
 then
 	EXCLLINES=$(cat $EXCLUDES|wc -l)
 	for (( k=1; k<=$(expr $EXCLLINES - $USERS); k++ ))
@@ -124,7 +124,7 @@ then
 	updateExcludes
 fi
 
-{ # SUPPRESSING FIRE
+# { # SUPPRESSING FIRE
 # we need to exit after X minutes in case someone doesn't log out of console or other unknown error
 while [ $SECONDS -lt $CONVERTED ]
 do
