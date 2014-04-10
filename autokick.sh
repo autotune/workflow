@@ -95,7 +95,7 @@ fi
 
 if [[ "$USERS" > "$EXCLLINES"||"$USERS" == "$EXCLLINES" ]];
 then
-EXCLLINES=$(cat $EXCLUDES|wc -l)
+	EXCLLINES=$(cat $EXCLUDES|wc -l)
 	echo "We good"
 	echo "There are $USERS rack users set to keep"
 	echo "There are $(cat $EXCLUDES|wc -l) lines in excludes file"
