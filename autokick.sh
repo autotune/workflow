@@ -22,7 +22,6 @@ TMP2="/var/tmp/tmp02$$.txt"
 EXCLUDES="/var/tmp/excludes$$.txt"
 #PID=$(ps -fu rack|grep sshd|grep rack@pts)
 # NUM=$(expr $(cat $TMP|wc -l) - $(cat $EXCLUDES|wc -l))
-USER="rack"
 
 touch $TMP
 touch $TMP2
