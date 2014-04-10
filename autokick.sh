@@ -11,8 +11,9 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-# note: current requirements is there needs to be exactly one ssh user logged that you
-# will be kicking off. Working on a way to fix.
+# note: current requirements is there needs to be one or more ssh user logged that you
+# will be kicking off. Not being logged in may work, but on the first kick of the first 
+# run it will kick off all sshd instances of the specified user logged on. Working on fix. 
 
 echo "Script PID is $$"
 PTS=$(ps ax|grep 'ssh rack@'|grep -v "grep"|wc -l)
