@@ -11,6 +11,9 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
+# note: current requirements is there needs to be exactly one ssh user logged that you
+# will be kicking off. Working on a way to fix.
+
 echo "Script PID is $$"
 PTS=$(ps ax|grep 'ssh rack@'|grep -v "grep"|wc -l)
 # TTY=$(tty|grep -o '[0-9]*')
