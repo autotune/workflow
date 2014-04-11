@@ -83,7 +83,6 @@ function updateTMP(){
         mv "$TMP2" "$TMP"
 
 }
-# output to two files. If tmp is different from existing, it means a new rack user has signed on. Find process id and kick off
 # since excludes is only meant to be ran once, it makes since to run it first
 if [[ ! -e "$EXCLUDES" ]] ;
 then 	
@@ -125,7 +124,7 @@ then
 	updateExcludes
 fi
 
-# { # SUPPRESSING FIRE
+{ # SUPPRESSING FIRE
 # we need to exit after X minutes in case someone doesn't log out of console or other unknown error
 while [ $SECONDS -lt $CONVERTED ]
 do
@@ -162,3 +161,4 @@ fi
 continue;
 done
 } &> /dev/null # finish output suppression
+
