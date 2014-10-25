@@ -1,0 +1,5 @@
+# removesql.rc
+# remove mysql and re-install for testing
+# DO NOT USE IN PRODUCTION!!!!!!!!!!!!!!!
+
+alias removesql="yum remove mysql-server -y && rm -fr /var/lib/mysql && yum install mysql-server -y && service mysqld start"
